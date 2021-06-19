@@ -1,0 +1,43 @@
+.log {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.logbook-data {
+  overflow-y: scroll;
+  width: 500px;
+  height: 500px;
+  line-height: 1.5rem;
+}
+.logbook-data-line {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.logbook-data-line-icon {
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .log {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-bottom: 100px;
+  }
+  .log-h1 {
+    font-size: 30px;
+  }
+  .logbook-data {
+    overflow-y: scroll;
+    width: 300px;
+    height: 500px;
+    line-height: 1.5rem;
+  }
+  .logbook-data-line {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+  .logbook-data-line-icon {
+    padding-right: 20px;
+  }
+}

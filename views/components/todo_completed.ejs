@@ -1,0 +1,21 @@
+<h3>Completed</h3>
+<div class="todo-complete">
+  <% for(var i = 0; i < todos.length; i++) { %> <%if(todos[i].checked===true) {
+  %>
+  <div class="todo-complete-content">
+    <div class="todo-text"><%= todos[i].content %></div>
+    <div>
+      <form
+        action="/dashboard/todos/<%= todos[i]._id%>"
+        method="POST"
+        id="delete-form"
+      >
+        <input type="hidden" name="_method" value="DELETE" />
+        <button type="submit" class="todo-trash">
+          <i class="fas fa-trash"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <% } %> <% } %>
+</div>

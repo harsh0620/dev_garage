@@ -1,0 +1,308 @@
+:root {
+  --primary-color: #fff;
+  --background-color: #f8f8f8;
+  --text-color: #303030;
+  --white: #f8f8f8;
+  --black: #303030;
+  --height: 28px;
+  --width: var(--height) * 2;
+}
+html body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  width: 100vw;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+/*Navbar CSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+.nav-color {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.right-dashboard {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  flex: row;
+}
+.toggler {
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+.toggler:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+.profile-image {
+  top: 15%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+.clock {
+  position: absolute;
+  width: 70px;
+  height: 35px;
+  top: 25%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #f8f8f8;
+  font-size: 20px;
+  font-family: Orbitron;
+}
+.login-btn {
+  width: 300px;
+  height: 50px;
+  color: #f8f8f8;
+  margin: 0% 35% 0px 35%;
+  border: none;
+  font-size: 25px;
+  border-radius: 30px;
+}
+.login-btn > a {
+  color: #f8f8f8;
+}
+.login-btn > a:hover {
+  color: #303030;
+}
+@media screen and (max-width: 768px) {
+  .login-btn {
+    width: 200px;
+    height: 35px;
+    color: #f8f8f8;
+    margin: 0% 20% 0px 20%;
+    border: none;
+    font-size: 15px;
+    border-radius: 15px;
+  }
+}
+/*Navbar CSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS end*/
+
+/*HERO CSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+.heroColor {
+  background-color: #f8f8f8;
+  color: #303030;
+}
+.heroMain {
+  height: 760px;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+}
+.hero {
+  animation: MoveUpDown 5s linear infinite;
+  position: absolute;
+  width: 100%;
+  height: 550px;
+}
+.header {
+  font-size: 120px;
+  text-align: left;
+}
+.text {
+  font-size: 50px;
+  text-align: right;
+  margin-right: 50px;
+}
+@keyframes MoveUpDown {
+  from {
+    top: 40px;
+  }
+  to {
+    top: 20px;
+  }
+}
+
+/*MIDDLE CSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+.storyscreen {
+  display: grid;
+  z-index: 1;
+  height: 760px;
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 24px;
+  justify-content: center;
+}
+.storycolor1 {
+  background-color: #303030;
+  color: #f8f8f8;
+  height: 760px;
+}
+.storycolor2 {
+  background-color: #f8f8f8;
+  color: #303030;
+  height: 760px;
+}
+.storydata {
+  max-width: 600px;
+  height: auto;
+  margin: 50% 0 0 0;
+  text-align: left;
+}
+.storydata1 {
+  max-width: 600px;
+  height: auto;
+  margin: 50% 0 0 0;
+  text-align: right;
+}
+.topic {
+  font-size: 50px;
+}
+.para {
+  font-size: 20px;
+}
+.story {
+  max-width: 555px;
+  height: 100%;
+  margin-right: 50px;
+}
+.story1 {
+  max-width: 555px;
+  height: 100%;
+  margin-right: 50px;
+}
+.storybich {
+  max-width: 200px;
+  height: 100%;
+  margin-right: 50px;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 60px;
+    text-align: center;
+  }
+  .text {
+    font-size: 20px;
+    text-align: center;
+    margin-right: 0px;
+  }
+  .hero {
+    animation: none;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    margin-top: 25%;
+  }
+  .heroMain {
+    height: 812px;
+    width: 100%;
+    justify-content: center;
+  }
+  @keyframes MoveUpDown {
+    from {
+      top: 360px;
+    }
+    to {
+      top: 260px;
+    }
+  }
+  .story {
+    max-width: 300px;
+    height: 500px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: -150px;
+    text-align: center;
+  }
+  .story1 {
+    max-width: 300px;
+
+    height: 500px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .storybich {
+    max-width: 300px;
+    height: 300px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .storycolor1 {
+    background-color: #303030;
+    color: #f8f8f8;
+    height: 820px;
+  }
+  .storycolor2 {
+    background-color: #f8f8f8;
+    color: #303030;
+    height: 812px;
+  }
+  .storydata {
+    max-width: 600px;
+    height: auto;
+    margin: 30% 0 -30% 0%;
+    text-align: center;
+  }
+  .storydata1 {
+    max-width: 600px;
+    height: auto;
+    margin: 20% 0 0 0%;
+    text-align: center;
+  }
+  .storyscreen {
+    text-align: center;
+  }
+  .topic {
+    font-size: 50px;
+  }
+  .para {
+    font-size: 20px;
+  }
+}
+
+/*FOOTER CSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+.footer {
+  padding: 40px;
+  margin: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #303030;
+  color: #f8f8f8;
+}
+.footer-title {
+  position: relative;
+  color: #f8f8f8;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #4e4e4e;
+}
+.footer-title:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 4px;
+  background: white;
+}
+.footer-links a {
+  padding: 10px 0;
+  border-bottom: 1px solid #303030;
+  color: #f8f8f8;
+  display: block;
+  transition: color 0.5s ease-in-out;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+.footer-bottom {
+  text-align: center;
+  margin-bottom: 5px;
+}
+/* g. Footer bottom section */
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,127 @@
+<div class="container">
+  <div class="card">
+    <div class="card-content">
+      <a
+        href="/dashboard/logs"
+        class="waves-effect waves-light btn-small red m-2"
+        >Logger</a
+      >
+
+      <a
+        href="/dashboard/todos"
+        class="waves-effect waves-light btn-small blue m-2"
+        >Todo</a
+      >
+
+      <a
+        href="/dashboard/pomodoro"
+        class="waves-effect waves-light btn-small yellow m-2"
+        >Pomodoro</a
+      >
+
+      <a
+        href="/dashboard/maintainer"
+        class="waves-effect waves-light btn-small grey m-2"
+        >Maintainer</a
+      >
+
+      <a
+        href="/dashboard/codefeed"
+        class="waves-effect waves-light btn-small green m-2"
+        >Codefeed</a
+      >
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-header bookmark-header">
+        <h6>Add Bookmarks</h6>
+        <a class="ellipse" href="/dashboard/add_bookmark">
+          <i class="fas fa-ellipsis-v"></i>
+        </a>
+      </div>
+      <div class="row">
+        <% for(var i = 0; i < bookmarks.length; i++) { %>
+        <div class="col-auto m-2">
+          <a
+            class="btn btn-small blue-grey"
+            href="<%=bookmarks[i].link%>"
+            target="_blank"
+          >
+            <%=bookmarks[i].title%>
+          </a>
+          <form
+            action="/dashboard/<%= bookmarks[i]._id%>"
+            method="POST"
+            id="delete-form"
+          >
+            <input type="hidden" name="_method" value="DELETE" />
+            <button type="submit" class="btn red mt-2 btn-small">
+              <i class="fas fa-trash"></i>
+            </button>
+          </form>
+        </div>
+
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="quote-card">
+      <div id="quote" class="quote">"Get Quote By Clicking on New Quote"</div>
+      <small id="author" class="author">- Author</small>
+      <br />
+      <button class="btn btn-small green" id="btn">New Quote</button>
+    </div>
+
+    <div class="work-graph">
+      <h4 style="display: flex; flex-direction: row">
+        Work Graph
+        <form action="/dashboard" method="POST" class="col s12" id="add-form">
+          <input type="hidden" name="_method" value="POST" />
+          <button type="submit" class="check">
+            <i class="fas fa-check"></i>
+          </button>
+        </form>
+      </h4>
+      <small>1 Jan 2021-Today</small>
+
+      <div class="graph">
+        <ul class="months">
+          <li>Jan</li>
+          <li>Feb</li>
+          <li>Mar</li>
+          <li>Apr</li>
+          <li>May</li>
+          <li>Jun</li>
+          <li>Jul</li>
+          <li>Aug</li>
+          <li>Sep</li>
+          <li>Oct</li>
+          <li>Nov</li>
+          <li>Dec</li>
+        </ul>
+        <ul class="days">
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+        </ul>
+        <ul class="squares">
+          <% for(var i =moments("01/01/2021"); i.isBefore(Date.now()); i.add(1,
+          'days')) { %> <%if(i.format('DD/MM/YYYY')===shortDate(Date.now())) {
+          %>
+
+          <li data-level="3"></li>
+          <%} else {%>
+          <li data-level="0"></li>
+          <% } %> <% } %>
+          <!-- added via javascript -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

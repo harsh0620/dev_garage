@@ -1,0 +1,54 @@
+<div class="container pomodoro">
+  <h3>Pomodoro Timer</h3>
+
+  <div id="pomodoro" class="pomodoro-main container">
+    <div id="status"></div>
+    <div class="timerDisplay">25:00</div>
+    <button id="start-btn" class="btn blue">START</button>
+    <button id="reset" class="btn black">RESET</button>
+  </div>
+  <h3>Set Duration</h3>
+  <div class="settings row">
+    <div class="col-lg-6">
+      <div id="work">
+        <p>Work Duration</p>
+        <div class="work-btn">
+          <button
+            class="btn-settings btn-floating btn-large waves-effect waves-light"
+            id="work-plus"
+          >
+            +
+          </button>
+          <div class="work-min"><span id="work-min">25</span> mins</div>
+          <button
+            class="btn-settings btn-floating btn-large waves-effect waves-light"
+            id="work-minus"
+          >
+            -
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div id="break">
+        <p>Break Duration</p>
+        <div class="break-btn">
+          <button
+            class="btn-settings btn-floating btn-large waves-effect waves-light"
+            id="break-plus"
+          >
+            +
+          </button>
+          <div class="break-min"><span id="break-min">5</span> mins</div>
+          <button
+            class="btn-settings btn-floating btn-large waves-effect waves-light"
+            id="break-minus"
+          >
+            -
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>After fixing the time use reset to set the clock.</p>
+</div>

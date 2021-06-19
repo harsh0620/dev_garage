@@ -1,0 +1,61 @@
+.todo-add {
+  width: 100%;
+  display: flex;
+  flex: row;
+}
+.todo-add-text {
+  color: var(--text-color);
+  max-width: 80%;
+}
+.todo-add-button {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+}
+.todo-incomplete {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  overflow-y: scroll;
+  margin-bottom: 50px;
+}
+.todo-incomplete-list {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.todo-text {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.todo-check {
+  cursor: pointer;
+  border: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 25px;
+}
+.todo-trash {
+  cursor: pointer;
+  border: none;
+  background-color: var(--background-color);
+  color: red;
+  font-size: 25px;
+}
+.todo-complete {
+  overflow-y: scroll;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  margin-bottom: 100px;
+}
+.todo-complete-content {
+  display: flex;
+  flex: row;
+  margin-bottom: 20px;
+}

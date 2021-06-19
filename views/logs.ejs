@@ -1,0 +1,28 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main" class="dynamic-color">
+  <!-- include dashboard -->
+  <%- include('include/_dashboard') %>
+  <!-- /include dashboard -->
+  <div class="container log">
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- include add_log -->
+        <%- include('components/log_add') %>
+        <!-- /include add_log -->
+      </div>
+      <div class="col-lg-6">
+        <!-- include log_show -->
+        <%- include('components/log_show') %>
+        <!-- /include log_show -->
+      </div>
+    </div>
+  </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>

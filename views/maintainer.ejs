@@ -1,0 +1,41 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Login Site -->
+<login id="site-main">
+  <!-- include dashboard -->
+  <%- include('include/_dashboard') %>
+  <!-- /include dashboard -->
+  <div>
+    <div class="container">
+      <div class="card blue darken-1">
+        <div class="card-content white-text">
+          <div class="manager-head-content ">
+              <div class="card-title">Mantainer</div>             
+              <div class="ml-auto">
+                <a class="btn btn-small black modal-trigger" href="#demo-modal">
+                  <p>Add Subject</p>
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+         <!-- include maintainer_show -->
+  <%- include('components/maintainer_show') %>
+  <!-- /include maintainer_show -->
+     
+    </div>
+  </div>
+  
+  <!-- include maintainer -->
+  <%- include('components/maintainer_add') %>
+  <!-- /include maintainer -->
+</login>
+<!-- /Login Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

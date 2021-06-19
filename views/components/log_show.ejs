@@ -1,0 +1,30 @@
+<h1 class="log-h1">Logs</h1>
+<div class="logbook-data">
+  <% for(var i = 0; i < logs.length; i++) { %>
+
+  <div class="logbook-data-line">
+    <div class="logbook-data-line-icon">
+      <a
+        href="/dashboard/logs/edit/<%= logs[i]._id%>"
+        class="btn border-shadow update black"
+      >
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+      <form
+        action="/dashboard/logs/<%= logs[i]._id%>"
+        method="POST"
+        id="delete-form"
+      >
+        <input type="hidden" name="_method" value="DELETE" />
+        <button type="submit" class="btn border-shadow red mt-2">
+          <i class="fas fa-trash"></i>
+        </button>
+      </form>
+    </div>
+    <%=shortDate(logs[i].createdAt)%>
+    <br />
+    <%= stripTags(logs[i].body) %>
+  </div>
+
+  <% } %>
+</div>

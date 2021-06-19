@@ -1,0 +1,32 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main" class="dynamic-color">
+  <!-- include dashboard -->
+  <%- include('include/_dashboard') %>
+  <!-- /include dashboard -->
+  <div class="container">
+    <!-- include todo_add -->
+    <%- include('components/todo_add') %>
+    <!-- /include todo_add -->
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- include todo_incomplete -->
+        <%- include('components/todo_incomplete') %>
+        <!-- /include todo_incomplete -->
+      </div>
+      <div class="col-lg-6">
+        <!-- include todo_complete -->
+        <%- include('components/todo_completed') %>
+        <!-- /include todo_complete -->
+      </div>
+    </div>
+  </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

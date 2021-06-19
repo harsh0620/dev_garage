@@ -1,0 +1,57 @@
+:root {
+  --primary-color: #fff;
+  --background-color: #f8f8f8;
+  --text-color: #303030;
+}
+.pomodoro {
+  text-align: center;
+}
+.pomodoro-main {
+  width: auto;
+  height: 200px;
+  border-style: solid;
+  border-color: var(--text-color);
+  border-radius: 2px;
+}
+#status {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border-radius: 0px 0px 35px 35px;
+  font-size: larger;
+}
+.timerDisplay {
+  font-size: 75px;
+  font-weight: bolder;
+}
+.work-btn,
+.break-btn {
+  margin: auto 35% auto 35%;
+  display: flex;
+  flex: row;
+}
+#break > p {
+  font-size: medium;
+}
+.work-min,
+.break-min {
+  font-size: 20px;
+  padding: 10px;
+}
+.btn-settings {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  font-size: 40px;
+}
+.btn-settings:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  font-size: 40px;
+}
+@media screen and (max-width: 768px) {
+  .work-btn,
+  .break-btn {
+    margin: auto 20% auto 20%;
+    display: flex;
+    flex: row;
+  }
+}

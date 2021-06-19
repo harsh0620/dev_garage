@@ -1,0 +1,103 @@
+<div class="container maintainer-show">
+  <% for(var i = 0; i < maintainers.length; i++) { %>
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content manager-bar">
+          <div class="card-title">
+            <div class="end-button">
+              <div><%=maintainers[i].title%></div>
+              <div class="ml-auto">
+                <form
+                  action="/dashboard/maintainer/<%= maintainers[i]._id%>"
+                  method="POST"
+                  id="delete-form"
+                >
+                  <input type="hidden" name="_method" value="DELETE" />
+                  <button type="submit" class="todo-maintainer-trash">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <p>
+            <b>
+              Attendance: <%=maintainers[i].presents%>/
+              <%=maintainers[i].totalClasses%></b
+            >
+          </p>
+          <div class="maintainer-update-form">
+            <div class="maintainer-update-inside-form">
+              <form
+                action="/dashboard/maintainer/<%=maintainers[i]._id%>"
+                method="POST"
+                id="update-form"
+              >
+                <input type="hidden" name="_method" value="PUT" />
+
+                <div class="input-field">
+                  <input
+                    type="number"
+                    id="presents"
+                    name="presents"
+                    value="<%=maintainers[i].presents%>"
+                  />
+                  <label for="presents">Initial Presents</label>
+                </div>
+                <div class="manager-count"></div>
+                <div class="input-field">
+                  <input
+                    type="number"
+                    id="totalClasses"
+                    name="totalClasses"
+                    value="<%=maintainers[i].totalClasses%>"
+                  />
+                  <label for="totalClasses">Total Classes</label>
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    class="
+                      btn-floating btn-small
+                      waves-effect waves-light
+                      red
+                      ml-auto
+                    "
+                  >
+                    <i class="fas fa-check"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="circle-show">
+              <div
+                class="percent-circle pc3"
+                data-percent="<%=getPercentage(maintainers[i].presents,maintainers[i].totalClasses)%>"
+              >
+                <svg>
+                  <use
+                    class="percent-circle-inner"
+                    xlink:href="#percent-circle-svg"
+                  ></use>
+                </svg>
+              </div>
+            </div>
+
+            <svg class="hidden">
+              <circle
+                id="percent-circle-svg"
+                cx="50%"
+                cy="50%"
+                r="50%"
+                stroke-alignment="inner"
+              ></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% } %>
+</div>

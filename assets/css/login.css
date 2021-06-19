@@ -1,0 +1,16 @@
+/* LOGIN CSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS */
+
+.loginBtn > a {
+  color: #f8f8f8;
+  text-decoration: none;
+}
+.card {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+.devtools {
+  width: 500px;
+  height: 200px;
+}
+
+/* LOGIN CSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS */

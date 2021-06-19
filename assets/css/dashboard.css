@@ -1,0 +1,149 @@
+:root {
+  --square-size: 14px;
+  --square-gap: 5px;
+  --week-width: calc(var(--square-size) + var(--square-gap));
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+.bookmark-header {
+  display: flex;
+  flex-direction: row;
+}
+.ellipse {
+  margin-left: auto;
+  margin-top: 5px;
+}
+.check {
+  margin-left: auto;
+  margin-top: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+}
+.work-graph {
+  padding-bottom: 100px;
+}
+
+.months {
+  grid-area: months;
+}
+.days {
+  grid-area: days;
+}
+.squares {
+  grid-area: squares;
+}
+
+.graph {
+  display: inline-grid;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  grid-template-areas:
+    "empty months"
+    "days squares";
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+  padding: 20px;
+  border: 1px var(--text-color) solid;
+  margin: 0px;
+}
+
+.months {
+  display: grid;
+  grid-template-columns:
+    calc(var(--week-width) * 4) /* Jan */
+    calc(var(--week-width) * 4) /* Feb */
+    calc(var(--week-width) * 4) /* Mar */
+    calc(var(--week-width) * 5) /* Apr */
+    calc(var(--week-width) * 4) /* May */
+    calc(var(--week-width) * 4) /* Jun */
+    calc(var(--week-width) * 5) /* Jul */
+    calc(var(--week-width) * 4) /* Aug */
+    calc(var(--week-width) * 4) /* Sep */
+    calc(var(--week-width) * 5) /* Oct */
+    calc(var(--week-width) * 4) /* Nov */
+    calc(var(--week-width) * 5) /* Dec */;
+}
+
+.days,
+.squares {
+  display: grid;
+  grid-gap: var(--square-gap);
+  grid-template-rows: repeat(7, var(--square-size));
+}
+
+.squares {
+  grid-auto-flow: column;
+  grid-auto-columns: var(--square-size);
+}
+
+.days li:nth-child(odd) {
+  visibility: hidden;
+}
+
+.squares li[data-level="0"] {
+  background-color: var(--text-color);
+}
+
+.squares li[data-level="1"] {
+  background-color: #c6e48b;
+}
+
+.squares li[data-level="2"] {
+  background-color: #7bc96f;
+}
+
+.squares li[data-level="3"] {
+  background-color: #196127;
+}
+.quote-card {
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.quote {
+  font-size: 30px;
+  top: 30px;
+}
+#btn {
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 250px;
+  }
+  .quote-card {
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+  }
+  .quote {
+    font-size: 15px;
+  }
+  #btn {
+    margin: auto;
+  }
+  :root {
+    --square-size: 7.5px;
+    --square-gap: 2.5px;
+    --week-width: calc(var(--square-size) + var(--square-gap));
+  }
+  .graph {
+    display: inline-grid;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    grid-template-areas:
+      "empty months"
+      "days squares";
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+  }
+}

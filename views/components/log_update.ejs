@@ -1,0 +1,40 @@
+<!-- include header -->
+<%- include('../include/_header') %>
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main" class="dynamic-color">
+  <!-- include dashboard -->
+  <%- include('../include/_dashboard') %>
+  <!-- /include dashboard -->
+  <div class="container">
+    <h3>Update Log</h3>
+    <div class="row">
+      <form
+        action="/dashboard/logs/<%= logs._id%>"
+        method="POST"
+        class="col s12"
+      >
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="row">
+          <div class="input-field">
+            <h5>Log your day:</h5>
+            <textarea id="body" name="body" class="text-area">
+<%= logs.body%></textarea
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="submit" value="Save" class="btn black" />
+          <a href="/dashboard/logs" class="btn red">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('../include/_footer') %>
+<!-- /include footer -->

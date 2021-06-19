@@ -1,0 +1,38 @@
+{
+  "name": "devgarage",
+  "version": "1.0.0",
+  "description": "A developer dashboard to increase productivity",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "keywords": [
+    "mongodb",
+    "expressjs",
+    "reactjs",
+    "nodejs"
+  ],
+  "author": "Harsh Chandravanshi",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "connect-mongo": "^4.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "jquery": "^3.6.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.13",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.7"
+  }
+}

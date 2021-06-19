@@ -1,0 +1,49 @@
+<div>
+  <h3>Incomplete</h3>
+  <div class="todo-incomplete">
+    <% for(var i = 0; i < todos.length; i++) { %> <%if(todos[i].checked===false)
+    { %>
+
+    <div class="todo-incomplete-list">
+      <div class="todo-text"><%= todos[i].content%></div>
+      <div class="todo-incomplete-button">
+        <form
+          action="/dashboard/todos/<%= todos[i]._id%>"
+          method="POST"
+          class="col s12"
+          id="update-form"
+        >
+          <input type="hidden" name="_method" value="PUT" />
+          <div class="input-field">
+            <button
+              onclick="change()"
+              type="submit"
+              id="myButton1"
+              name="checked"
+              value="<%= todos[i].checked%>"
+              class="todo-check"
+            >
+              <i class="fas fa-check"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <form
+          action="/dashboard/todos/<%= todos[i]._id%>"
+          method="POST"
+          id="delete-form"
+        >
+          <input type="hidden" name="_method" value="DELETE" />
+          <div class="input-field">
+            <button type="submit" class="todo-trash">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <% } %> <% } %>
+  </div>
+</div>
